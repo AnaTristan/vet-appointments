@@ -1,5 +1,8 @@
+import { useState,useEffect } from "react"
 
 function AppForm() {
+
+    const[name,setName]=useState('hook');
 
     return (
 
