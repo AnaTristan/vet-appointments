@@ -6,7 +6,7 @@ function PatientsList() {
             <h2 className="font-black text-3xl text-center">Patients</h2>
             <p className="text-xl mt-5 mb-10 text-center">
                 Administra tus {''}
-                <span className="text-indigo-600">Pacientes y citas</span>
+                <span className="text-indigo-600 font-bold">pacientes y citas</span>
             </p>   
             <Patient/>
         </div>
