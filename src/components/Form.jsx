@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Error } from "./Error";
+import ErrorApp from "./Error"
 
 function AppForm({ patients, setPatients }) {
   const [name, setName] = useState("");
@@ -52,7 +52,11 @@ function AppForm({ patients, setPatients }) {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
       >
-        {error && <Error message="Todos los campos son obligatorios" />}
+        {error && (
+          <ErrorApp>
+            <p>Todos los campos son obligatorios</p>
+          </ErrorApp>
+        )}
         <div className="mb-5">
           <label
             htmlFor="pet"

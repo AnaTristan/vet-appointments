@@ -1,11 +1,9 @@
-const Error = ({ message }) => {
+const ErrorApp = ({children} ) => {
   return (
-    <div>
-      <p className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3">
-        {message}
-      </p>
+    <div className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3">
+      {children}
     </div>
   );
 };
 
-export default Error;
+export default ErrorApp;
