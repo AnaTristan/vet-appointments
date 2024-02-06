@@ -11,6 +11,17 @@ function AppForm({ patients, setPatients }) {
 
   const [error, setError] = useState(false);
 
+  const generateId = () => {
+
+    // using math randoms and date now to generate ID 
+
+    const random = Math.random().toString(36).substring(2);
+    const date = Date.now().toString(36);
+
+    return random + date;
+
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // form validation
@@ -28,6 +39,7 @@ function AppForm({ patients, setPatients }) {
       email,
       date,
       sin,
+      id: generateId()
     };
     setPatients([...patients, patientsObject]);
 
