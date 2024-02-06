@@ -56,7 +56,7 @@ function AppForm({ patients, setPatients }) {
       <h2 className="font-black text-3xl text-center">Seguimiento pacientes</h2>
 
       <p className="text-lg mt-5 text-center mb-10">
-        Anade pacientes y{" "}
+        Añade pacientes y{" "}
         <span className="text-indigo-600 font-bold">administralos</span>
       </p>
 
