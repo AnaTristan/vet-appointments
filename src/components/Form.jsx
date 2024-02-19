@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import ErrorApp from "./Error"
+import ErrorApp from "./Error";
 
 function AppForm({ patients, setPatients }) {
   const [name, setName] = useState("");
@@ -12,15 +12,13 @@ function AppForm({ patients, setPatients }) {
   const [error, setError] = useState(false);
 
   const generateId = () => {
-
-    // using math randoms and date now to generate ID 
+    // using math randoms and date now to generate ID
 
     const random = Math.random().toString(36).substring(2);
     const date = Date.now().toString(36);
 
     return random + date;
-
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +37,7 @@ function AppForm({ patients, setPatients }) {
       email,
       date,
       sin,
-      id: generateId()
+      id: generateId(),
     };
     setPatients([...patients, patientsObject]);
 
@@ -50,6 +48,16 @@ function AppForm({ patients, setPatients }) {
     setDate("");
     setSin("");
   };
+
+  useEffect(() => {
+    if(Object.keys(patients).length>0){
+      setName(patients.name);
+      setName(patients.owner);
+      setName(patients.email);
+      setName(patients.date);
+      setName(patients.sin);
+    }
+  }, [patients]);
 
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen mx-5">
